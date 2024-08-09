@@ -18,7 +18,7 @@ namespace CleanArchMvc.Infra.Data.Identity
 
         public async Task<bool> Authenticate(string email, string password)
         {
-            SignInResult result = await _signInManager.PasswordSignInAsync(email, password, false, false);
+            SignInResult result = await _signInManager.PasswordSignInAsync(email, password,  false, false);
 
             return result.Succeeded;
         }
